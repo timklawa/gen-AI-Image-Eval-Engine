@@ -278,7 +278,7 @@ For production deployment, see `rareplanes-analyzer/DEPLOYMENT.md` for detailed 
 
 ## 📄 License
 
-This project is for educational and research purposes. The Rareplanes dataset is licensed under CC BY 4.0.
+This project is for educational and research purposes only and not intended for commercial use. The Rareplanes dataset is licensed under CC BY 4.0.
 
 ## 🙏 Acknowledgments
 
