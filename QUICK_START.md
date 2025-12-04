@@ -6,7 +6,7 @@ Your React app for analyzing GenAI vision models against the Rareplanes dataset 
 
 ### 1. Navigate to the App Directory
 ```bash
-cd /Users/timklawa/Documents/SoftwareDevelopment/GenAI_Image_Eval/rareplanes-analyzer
+cd rareplanes-analyzer
 ```
 
 ### 2. Start the Application
@@ -61,13 +61,13 @@ If the startup script doesn't work, you can run the servers manually:
 
 **Terminal 1 (Backend):**
 ```bash
-cd /Users/timklawa/Documents/SoftwareDevelopment/GenAI_Image_Eval/rareplanes-analyzer
+cd rareplanes-analyzer
 npm run server
 ```
 
 **Terminal 2 (Frontend):**
 ```bash
-cd /Users/timklawa/Documents/SoftwareDevelopment/GenAI_Image_Eval/rareplanes-analyzer
+cd rareplanes-analyzer
 npm start
 ```
 

@@ -24,8 +24,8 @@ A comprehensive evaluation platform for testing multiple Large Language Models (
 
 ### 1. Clone and Install
 ```bash
-git clone <your-repository-url>
-cd rareplanes-analyzer
+git clone https://github.com/timklawa/gen-AI-Image-Eval-Engine.git
+cd gen-AI-Image-Eval-Engine/rareplanes-analyzer
 npm install
 ```
 
