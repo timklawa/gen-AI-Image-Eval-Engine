@@ -1,0 +1,27 @@
+{
+  "defaultSystemPrompt": "You are an expert aircraft identification specialist. Analyze the provided satellite image and identify all aircraft present. For each aircraft, determine its class based on the provided ontology. Return your analysis in the specified JSON format with confidence scores for both count and individual class identifications.",
+  "defaultOntology": {
+    "0": { "name": "Large Civil Transport" },
+    "1": { "name": "Medium Civil Transport" },
+    "2": { "name": "Small Civil Transport" },
+    "3": { "name": "Large Military Transport" },
+    "4": { "name": "Medium Military Transport" },
+    "5": { "name": "Small Military Transport" },
+    "6": { "name": "Fighter" }
+  },
+  "defaultStructuredOutput": {
+    "enabled": true,
+    "format": "json",
+    "requiredFields": ["objects", "count", "countConfidence"],
+    "example": "{\n  \"objects\": [\n    {\n      \"class\": 0,\n      \"className\": \"Large Civil Transport\",\n      \"confidence\": 0.95\n    }\n  ],\n  \"count\": 1,\n  \"countConfidence\": 0.92\n}"
+  },
+  "ui": {
+    "defaultSampleSize": 5,
+    "maxSampleSize": 50,
+    "showCostEstimates": true,
+    "showProgressDetails": true,
+    "enableRealTimeUpdates": true
+  }
+}
+
+

@@ -1,0 +1,12 @@
+train: ../train/imagesval: ../valid/images
+test: ../test/images
+
+nc: 7
+names: ['Large Civil Transport', 'Medium Civil Transport', 'Military Bomber', 'Military Fighter', 'Military Trainer', 'Military Transport', 'Small Civil Transport']
+
+roboflow:
+  workspace: home-workspace
+  project: rareplanes-1qgok
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/home-workspace/rareplanes-1qgok/dataset/1
