@@ -32,6 +32,7 @@ npm install
 ### 2. Configure Environment Variables
 Copy the example environment file and add your API keys:
 ```bash
+cd rareplanes-analyzer
 cp .env.example .env
 ```
 
@@ -64,14 +65,14 @@ REACT_APP_AWS_REGION=us-east-1
 
 ### 3. Customize Configuration (Optional)
 The tool comes with sensible defaults, but you can customize:
-- **LLM Providers**: Edit `src/config/llmProviders.json` to add/modify models
-- **Evaluation Settings**: Edit `src/config/evalConfig.json` to customize prompts and ontology
+- **LLM Providers**: Edit `rareplanes-analyzer/src/config/llmProviders.json` to add/modify models
+- **Evaluation Settings**: Edit `rareplanes-analyzer/src/config/evalConfig.json` to customize prompts and ontology
 - **System Prompt**: Modify the default prompt sent to LLMs
 - **Aircraft Ontology**: Update classification system and examples
 - **UI Settings**: Change default sample size and display options
 
 ### 4. Configure LLM Models
-Edit `src/config/llmProviders.json` to customize which models you want to test:
+Edit `rareplanes-analyzer/src/config/llmProviders.json` to customize which models you want to test:
 
 ```json
 {
@@ -93,10 +94,10 @@ Edit `src/config/llmProviders.json` to customize which models you want to test:
 }
 ```
 
-### 4. Add Your Dataset
-Place your Rareplanes dataset in the `dataset/` directory:
+### 5. Add Your Dataset
+Place your Rareplanes dataset in the `rareplanes-analyzer/dataset/` directory:
 ```
-dataset/
+rareplanes-analyzer/dataset/
 ├── data.yaml
 ├── train/
 │   ├── images/     # .jpg files
@@ -109,8 +110,10 @@ dataset/
     └── labels/
 ```
 
-### 5. Run the Application
+### 6. Run the Application
 ```bash
+cd rareplanes-analyzer
+
 # Start both frontend and backend
 npm run dev
 
@@ -169,14 +172,14 @@ npm start       # Frontend on port 3000
 ## ⚙️ Configuration Options
 
 ### LLM Provider Configuration
-Edit `src/config/llmProviders.json` to:
+Edit `rareplanes-analyzer/src/config/llmProviders.json` to:
 - Add/remove LLM providers
 - Modify model parameters (costs, token limits)
 - Enable/disable specific models
 - Update model names and descriptions
 
 ### Evaluation Configuration
-Edit `src/config/evalConfig.json` to customize:
+Edit `rareplanes-analyzer/src/config/evalConfig.json` to customize:
 - **Default System Prompt**: The base prompt sent to LLMs for aircraft detection
 - **Aircraft Ontology**: Classification system matching the Rareplanes dataset (7 aircraft types)
 - **Structured Output**: JSON format requirements and validation rules
@@ -248,22 +251,25 @@ Edit `src/config/evalConfig.json` to customize:
 ## 📁 Project Structure
 
 ```
-rareplanes-analyzer/
-├── src/
-│   ├── components/          # React UI components
-│   ├── config/
-│   │   └── llmProviders.json # LLM provider configurations
-│   ├── services/            # API and evaluation services
-│   └── types/               # TypeScript definitions
-├── dataset/                 # Your Rareplanes dataset
-├── server.js               # Express backend server
-├── .env.example            # Environment variables template
-└── README.md               # This file
+gen-AI-Image-Eval-Engine/
+├── rareplanes-analyzer/
+│   ├── src/
+│   │   ├── components/          # React UI components
+│   │   ├── config/
+│   │   │   └── llmProviders.json # LLM provider configurations
+│   │   ├── services/            # API and evaluation services
+│   │   └── types/               # TypeScript definitions
+│   ├── dataset/                 # Your Rareplanes dataset
+│   ├── server.js               # Express backend server
+│   ├── .env.example            # Environment variables template
+│   └── DEPLOYMENT.md           # Deployment documentation
+├── QUICK_START.md              # Quick start guide
+└── README.md                   # This file
 ```
 
 ## 🚀 Deployment
 
-For production deployment, see [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions on:
+For production deployment, see `rareplanes-analyzer/DEPLOYMENT.md` for detailed instructions on:
 - VPS/Server deployment
 - Docker containerization
 - Cloud platform deployment (Heroku, Vercel, AWS)
@@ -283,3 +289,4 @@ This project is for educational and research purposes. The Rareplanes dataset is
 ---
 
 **Ready to evaluate your LLMs?** Start by configuring your API keys and selecting the models you want to test!
+
